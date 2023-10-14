@@ -19,7 +19,7 @@ This analysis was to build a model that would accurately and precisely predict w
 
 This logistic model is more adept at predicting healthy loans than high risk loans, but that may be affected due to the distribution of healthy vs high risk loans in the training and test data.
 
-Within the models predicted healthy loans, it is 100% precise (this is rounded up, not actually a perfect model), and missclassifies only 1% (complement of recall) of the healthy loans as high risk loans.
+Within the models predicted healthy loans, it is 100% precise, and missclassifies only 1% (complement of recall) of the healthy loans as high risk loans.
 
 Within the models predicted high risk loans, it is 85% precise, and misclassifies 9% (complement of recall) of the high risk loans as healthy loans.
 
