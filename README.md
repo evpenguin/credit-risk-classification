@@ -10,13 +10,17 @@ This analysis was to build a model that would accurately and precisely predict w
 * Logistic Regression
   * This model had overall accuracy of 99%.
   * For healthy loans, the model had 100%* precision, and 99% recall.
-  * For high risk loans, the model had 85% precision, and 91% recall. 
+  * For high risk loans, the model had 85% precision, and 91% recall.
+
+*This precision of 100% is inaccurate according to the confusion matrix- it is highly likely that the model is rounding this figure up from some high level of 99. something % precision instead. 
 
 
 ## Summary
 
-Summarise the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
-* Which one seems to perform best? How do you know it performs best?
-* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
+This logistic model is more adept at predicting healthy loans than high risk loans, but that may be affected due to the distribution of healthy vs high risk loans in the training and test data.
 
-If you do not recommend any of the models, please justify your reasoning.
+Within the models predicted healthy loans, it is 100% precise (this is rounded up, not actually a perfect model), and missclassifies only 1% (complement of recall) of the healthy loans as high risk loans.
+
+Within the models predicted high risk loans, it is 85% precise, and misclassifies 9% (complement of recall) of the high risk loans as healthy loans.
+
+This Logistic Regression performs reasonably well, however this data set leaves some things to be desired. Without further training and testing data, and discussion with the client, I would not reccomend this model be put into prodiction to predict loan health. The low level of precision and recall on High Risk Loans is concerning, and could pose significant risk to the buisness to continually misclassify these loans. 
